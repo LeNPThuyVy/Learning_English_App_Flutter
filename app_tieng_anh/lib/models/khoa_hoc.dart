@@ -1,3 +1,4 @@
+
 class KhoaHoc 
 {
   //Thuộc tính 
@@ -12,7 +13,10 @@ class KhoaHoc
     {
       required this.id, 
       required this.tenKhoaHoc, 
+      this.anhDaiDien,
+      this.moTa,
       required this.maLoai,
+
     }
   );
 

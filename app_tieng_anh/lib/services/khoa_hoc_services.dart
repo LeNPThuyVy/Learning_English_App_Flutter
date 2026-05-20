@@ -13,7 +13,7 @@ class KhoaHocServices
 
   //Các phương thức
   //Tổng số lượng khóa học (admin quản lý)
-  int tongSoLuongKhoaHoc()
+  Future<int> tongSoLuongKhoaHoc() async
   {
     return KhoaHocs.length;
   }
@@ -25,13 +25,13 @@ class KhoaHocServices
   }
 
   //Thêm khóa học mới (admin quản lý)
-  void themKhoaHoc(KhoaHoc khoaHoc)
+  Future<void> themKhoaHoc(KhoaHoc khoaHoc) async
   {
     KhoaHocs.add(khoaHoc);
   }
 
   //Xóa khóa học (admin quản lý)
-  void xoaKhoaHoc(int id)
+  Future<void> xoaKhoaHoc(int id) async
   {
     KhoaHocs.removeWhere((khoaHoc) => khoaHoc.id == id);
   }

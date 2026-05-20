@@ -1,13 +1,15 @@
+
+
 class TienDo 
 {
   int id;
   int userId;
   String loaiTienDo;
-  int ma_entity;
+  int maEntity;
   double diem;
-  bool hoanThanh=false;
+  bool hoanThanh;
   DateTime ?ngayHoanThanh;
-  int xpEarned=0;
+  int xpEarned;
 
   TienDo
   (
@@ -15,8 +17,11 @@ class TienDo
       required this.id,
       required this.userId,
       required this.loaiTienDo,
-      required this.ma_entity,
-      required this.diem
+      required this.maEntity,
+      required this.diem,
+      this.hoanThanh=false,
+      this.ngayHoanThanh,
+      this.xpEarned=0
     }
   );
 }

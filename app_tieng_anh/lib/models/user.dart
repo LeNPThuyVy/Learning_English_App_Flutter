@@ -1,10 +1,12 @@
+
 class User 
 {
   int id;
   String email;
   String pass;
   String userName;
-  DateTime dateCreate=DateTime.now();
+  String avatarURL;
+  DateTime dateCreate;
   int idRole;
   
   User
@@ -14,7 +16,9 @@ class User
       required this.email,
       required this.pass,
       required this.userName,
+      this.avatarURL="",
+      DateTime? dateCreate,
       required this.idRole
     }
-  );
+  ): this.dateCreate=dateCreate??DateTime.now();
 }

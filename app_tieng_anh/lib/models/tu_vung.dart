@@ -1,4 +1,5 @@
 
+
 class TuVung 
 {
   int id;
@@ -13,7 +14,6 @@ class TuVung
 
   TuVung
   (
-    imageURL,
     {
       required this.id,
       required this.tu,
@@ -21,8 +21,9 @@ class TuVung
       required this.phienAm,
       required this.viDu,
       required this.audioURL,
+      this.imageURL,
       required this.loaiTu,
-      required this.idBaiHoc
+      required this.idBaiHoc,
     }
   );
 }

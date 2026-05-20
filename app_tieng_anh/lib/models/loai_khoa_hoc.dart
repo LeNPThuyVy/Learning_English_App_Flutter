@@ -1,13 +1,14 @@
+
 class LoaiKhoaHoc 
 {
   int id;
-  String ten_loai;
+  String tenLoai;
 
   LoaiKhoaHoc
   (
     {
       required this.id,
-      required this.ten_loai
+      required this.tenLoai
     }
   );
 }

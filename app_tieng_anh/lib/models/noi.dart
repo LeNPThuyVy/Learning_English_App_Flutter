@@ -1,3 +1,4 @@
+
 class Noi 
 {
   int id;

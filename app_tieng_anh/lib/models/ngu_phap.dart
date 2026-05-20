@@ -1,3 +1,4 @@
+
 class NguPhap 
 {
   int id;
