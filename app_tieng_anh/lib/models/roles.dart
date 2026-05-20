@@ -1,13 +1,29 @@
 
 class Roles 
 {
-  int id;
+  int?id;
   String tenRole;
   Roles
   (
     {
-      required this.id,
+      this.id,
       required this.tenRole
     }
   );
+
+  Map<String, dynamic> toMap() 
+  {
+    return
+    {
+      'id': id,
+      'tenRole': tenRole,
+    };
+  }
+
+  factory Roles.fromMap(Map<String, dynamic> map) {
+    return Roles(
+      id: map['id'] as int?,
+      tenRole: map['tenRole'] as String,
+    );
+  }
 }

@@ -1,7 +1,7 @@
 
 class NguPhap 
 {
-  int id;
+  int?id;
   String tieuDe;
   String noiDung;
   String giaiThich;
@@ -11,7 +11,7 @@ class NguPhap
   NguPhap
   (
     {
-      required this.id,
+      this.id,
       required this.tieuDe,
       required this.noiDung,
       required this.giaiThich,
@@ -19,4 +19,30 @@ class NguPhap
       required this.idBaiHoc
     }
   );
+
+  Map<String, dynamic> toMap() 
+  {
+    return 
+    {
+      'id': id,
+      'tieuDe': tieuDe,
+      'noiDung': noiDung,
+      'giaiThich': giaiThich,
+      'viDu': viDu,
+      'idBaiHoc': idBaiHoc,
+    };
+  }
+
+  factory NguPhap.fromMap(Map<String, dynamic> map) 
+  {
+    return NguPhap
+    (
+      id: map['id'] as int?,
+      tieuDe: map['tieuDe'] as String,
+      noiDung: map['noiDung'] as String,
+      giaiThich: map['giaiThich'] as String,
+      viDu: map['viDu'] as String,
+      idBaiHoc: map['idBaiHoc'] as int,
+    );
+  }
 }

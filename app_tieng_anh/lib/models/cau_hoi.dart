@@ -3,8 +3,8 @@ import 'package:app_tieng_anh/models/cau_tra_loi.dart';
 
 class CauHoi 
 {
-  final List<CauTraLoi> CauTraLois=[];
-  int id;
+
+  int? id;
   String cauHoi;
   String dapAn;
   String loaiBai;//Bài nghe nói đọc viết hay từ vựng ngữ pháp ,...
@@ -12,7 +12,7 @@ class CauHoi
   CauHoi
   (
     {
-      required this.id,
+      this.id,
       required this.cauHoi,
       required this.dapAn,
       required this.loaiBai,
@@ -20,8 +20,9 @@ class CauHoi
     }
   );
 
-  Future<List<CauTraLoi>> getCauTraLoi() async
+    Future<List<CauTraLoi>> getCauTraLoi() async
   {
-    return CauTraLois.where((x)=>x.idCauHoi==this.id).toList();
+    List<CauTraLoi> cauTraLois=[];
+    return cauTraLois.where((x)=>x.idCauHoi==id).toList();
   }
 }

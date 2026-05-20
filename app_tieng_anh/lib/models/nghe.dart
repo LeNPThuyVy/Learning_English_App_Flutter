@@ -1,20 +1,30 @@
 
 class Nghe 
 {
-  int id;
+  int? id;
   String cauMau;
   String audioURL;
   String noiDung;
-  int idBaiHoc;
+  int ?idBaiHoc;
 
   Nghe
   (
     {
-      required this.id,
+      this.id,
       required this.cauMau,
       required this.audioURL,
       required this.noiDung,
-      required this.idBaiHoc
+      this.idBaiHoc
     }
   );
+
+  factory Nghe.fromJson(dynamic jsonBaiNghe)
+  {
+    return Nghe
+    (
+      cauMau: jsonBaiNghe[''], 
+      audioURL: jsonBaiNghe[''], 
+      noiDung: jsonBaiNghe['']
+    );
+  }
 }

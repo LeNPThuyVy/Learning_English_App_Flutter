@@ -81,7 +81,7 @@ class UserServices
   }
 
   //Kiểm tra quyền người dùng
-  Future<Roles?>GetRole(User u) async
+  Future<Roles?>GetRole(User u,) async
   {
     //Lấy ra role của nguoif dùng rồi mapping với danh sách role
     List<Roles> ?roles;

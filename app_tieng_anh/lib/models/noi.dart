@@ -1,18 +1,28 @@
 
+//Nhớ xem lại coi cách truyền id sao cho hợp lý nha
 class Noi 
 {
-  int id;
+  int ?id;
   String cauMau;
   String audioURL;
-  int idBaiHoc;
+  int ?idBaiHoc;
   
   Noi
   (
     {
-      required this.id,
+      this.id,
       required this.cauMau,
       required this.audioURL,
-      required this.idBaiHoc
+      this.idBaiHoc
     }
   );
+
+  factory Noi.fromJson(dynamic jsonBaiNoi)
+  {
+    return Noi
+    (
+      cauMau: jsonBaiNoi[''],
+      audioURL: jsonBaiNoi['']
+    );
+  }
 }
